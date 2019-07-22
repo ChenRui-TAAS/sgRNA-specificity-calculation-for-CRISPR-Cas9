@@ -10,18 +10,7 @@ chenrui.taas@gmail.com;chenrui.2011@outlook.com
 
 ####################
 
-Clustered regularly interspaced short palindromic repeats (CRISPR), a class of immune-associated sequences in bacteria, 
-have been developed as a powerful tool for editing eukaryotic genomes in diverse cells and organisms in recent years. 
-The CRISPR-Cas9 system can recognize upstream 20 nt sequence (guide sequence) adjacent to the PAM site, and trigger 
-double strand DNA cleavage and DNA repair mechanisms, which eventually result in knock-out, knock-in or site-specific 
-mutagenesis. However, off-target effect caused by guide sequence misrecognition is the major drawback and restricts its 
-widespread application. In this study, global analysis of specificities of all guide sequences in Arabidopsis thaliana 
-(A. thaliana), Oryza sativa (rice) and Glycine max (soybean) genomes were performed and three genome-wide databases for 
-these plants were established including intergenic regions. For each target site of CRISPR-Cas9, specificity score and 
-off-target number were calculated and evaluated. The mean values of off-target number for A. thaliana, rice and soybean 
-were determined as 27.5, 57.3 and 174.7, respectively. Comparative analysis among these plants suggested that the frequency 
-of off-target effect was positively correlated to genome size. Our results contributed to the better understanding of 
-CRISPR-Cas9 system in plants and helped to minimize the off-target effect during its applications in the future.
+Clustered regularly interspaced short palindromic repeats (CRISPR), a class of immune-associated sequences in bacteria, have been developed as a powerful tool for editing eukaryotic genomes in diverse cells and organisms in recent years. The CRISPR-Cas9 system can recognize upstream 20 nt sequence (guide sequence) adjacent to the PAM site, and trigger double strand DNA cleavage and DNA repair mechanisms, which eventually result in knock-out, knock-in or site-specific mutagenesis. However, off-target effect caused by guide sequence misrecognition is the major drawback and restricts its widespread application. In this study, global analysis of specificities of all guide sequences in Arabidopsis thaliana, Oryza sativa (rice) and Glycine max (soybean) genomes were performed and three genome-wide databases for these plants were established including intergenic regions. For each target site of CRISPR-Cas9, specificity score and off-target number were calculated and evaluated. The mean values of off-target number for A. thaliana, rice and soybean were determined as 27.5, 57.3 and 174.7, respectively. Comparative analysis among these plants suggested that the frequency of off-target effect was positively correlated to genome size. Our results contributed to the better understanding of CRISPR-Cas9 system in plants and helped to minimize the off-target effect during its applications in the future.
 
 ####################
 
