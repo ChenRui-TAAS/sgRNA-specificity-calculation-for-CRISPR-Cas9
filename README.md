@@ -16,9 +16,9 @@ Clustered regularly interspaced short palindromic repeats (CRISPR), a class of i
 
 Version of plant genomes:
 
-A.thaliana genome (TAIR10) was downloaded from Ensembl (http://www.ensembl.org) 30. 
+A.thaliana genome (TAIR10) was downloaded from Ensembl (http://www.ensembl.org). 
 O. sativa genome (IRGSP-1.0) was downloaded from NCBI (GCF_001433935.1). 
-G. max genome (Gmax_275_v2.0) and annotation files were downloaded from Phytozome (https://phytozome.jgi.doe.gov, Gmax V10) 31. 
+G. max genome (Gmax_275_v2.0) and annotation files were downloaded from Phytozome (https://phytozome.jgi.doe.gov, Gmax V10). 
 
 ####################
 
