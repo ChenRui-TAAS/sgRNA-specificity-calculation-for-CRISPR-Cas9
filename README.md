@@ -1,5 +1,5 @@
 # sgRNA-specificity-calculation-for-CRISPR-Cas9
-A simple pipeline for genome-widely calculating sgRNA specificity and off-target number for the CRISPR-Cas9 system
+A simple pipeline for genome-wide calculating sgRNA specificity and off-target number for the CRISPR-Cas9 system
 
 2019.07.18
 
