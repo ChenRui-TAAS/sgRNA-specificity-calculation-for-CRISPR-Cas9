@@ -24,12 +24,11 @@ G. max genome (Gmax_275_v2.0) and annotation files were downloaded from Phytozom
 
 Manual for sgRNA analysis
 
-##Step_1, get whole set of sgRNA sequences.
+##Step_1, get whole set of sgRNA sequences.\
 
+"extract_sgRNAs_across_genome.pl"\
 
-"extract_sgRNAs_across_genome.pl"
-
-Usage:
+Usage:\
 perl   extract_sgRNAs_across_genome.pl   gff3_file   genome.fa   output_filename
 
 For example:
