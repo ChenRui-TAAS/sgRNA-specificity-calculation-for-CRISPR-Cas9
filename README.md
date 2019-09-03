@@ -1,29 +1,29 @@
 sgRNA-specificity-calculation-for-CRISPR-Cas9
 =============================================
 
-A simple pipeline for genome-wide calculating sgRNA specificity and off-target number for the CRISPR-Cas9 system<br>
-2019.09.03<br>
-Rui Chen<br>
-chenrui.taas@gmail.com; chenrui.2011@outlook.com<br>
+A simple pipeline for genome-wide calculating sgRNA specificity and off-target number for the CRISPR-Cas9 system  
+2019.09.03  
+Rui Chen  
+chenrui.taas@gmail.com; chenrui.2011@outlook.com  
 
 Brief introduction
 ------------------
-Clustered regularly interspaced short palindromic repeats (CRISPR), a class of immune-associated sequences in bacteria, have been developed as a powerful tool for editing eukaryotic genomes in diverse cells and organisms in recent years. The CRISPR-Cas9 system can recognize upstream 20 nt sequence (guide sequence) adjacent to the PAM site, and trigger double strand DNA cleavage and DNA repair mechanisms, which eventually result in knock-out, knock-in or site-specific mutagenesis. However, off-target effect caused by guide sequence misrecognition is the major drawback and restricts its widespread application. In this study, global analysis of specificities of all guide sequences in _Arabidopsis thaliana_, _Oryza sativa_ (rice) and _Glycine max_ (soybean) genomes were performed and three genome-wide databases for these plants were established including intergenic regions. For each target site of CRISPR-Cas9, specificity score and off-target number were calculated and evaluated. The mean values of off-target number for A. thaliana, rice and soybean were determined as 27.5, 57.3 and 174.7, respectively. Comparative analysis among these plants suggested that the frequency of off-target effect was positively correlated to genome size. Our results contributed to the better understanding of CRISPR-Cas9 system in plants and helped to minimize the off-target effect during its applications in the future.<br>
+Clustered regularly interspaced short palindromic repeats (CRISPR), a class of immune-associated sequences in bacteria, have been developed as a powerful tool for editing eukaryotic genomes in diverse cells and organisms in recent years. The CRISPR-Cas9 system can recognize upstream 20 nt sequence (guide sequence) adjacent to the PAM site, and trigger double strand DNA cleavage and DNA repair mechanisms, which eventually result in knock-out, knock-in or site-specific mutagenesis. However, off-target effect caused by guide sequence misrecognition is the major drawback and restricts its widespread application. In this study, global analysis of specificities of all guide sequences in _Arabidopsis thaliana_, _Oryza sativa_ (rice) and _Glycine max_ (soybean) genomes were performed and three genome-wide databases for these plants were established including intergenic regions. For each target site of CRISPR-Cas9, specificity score and off-target number were calculated and evaluated. The mean values of off-target number for A. thaliana, rice and soybean were determined as 27.5, 57.3 and 174.7, respectively. Comparative analysis among these plants suggested that the frequency of off-target effect was positively correlated to genome size. Our results contributed to the better understanding of CRISPR-Cas9 system in plants and helped to minimize the off-target effect during its applications in the future.  
 
 Version of plant genomes:
 -------------------------
-_Arabidopsis thaliana_ genome (TAIR10) was downloaded from Ensembl (http://www.ensembl.org).<br>
-_Oryza sativa_ genome (IRGSP-1.0) was downloaded from NCBI (GCF_001433935.1).<br>
-_Glycine max_ genome (Gmax_275_v2.0) and annotation files were downloaded from Phytozome (https://phytozome.jgi.doe.gov, Gmax V10).<br>
+_Arabidopsis thaliana_ genome (TAIR10) was downloaded from Ensembl (http://www.ensembl.org).  
+_Oryza sativa_ genome (IRGSP-1.0) was downloaded from NCBI (GCF_001433935.1).  
+_Glycine max_ genome (Gmax_275_v2.0) and annotation files were downloaded from Phytozome (https://phytozome.jgi.doe.gov, Gmax V10).  
 
 Manual for sgRNA analysis
 -------------------------
-###Step_1, get whole set of sgRNA sequences.<br>
+###Step_1, get whole set of sgRNA sequences.  
 
-"extract_sgRNAs_across_genome.pl"<br>
+"extract_sgRNAs_across_genome.pl"  
 
-Usage:<br>
-    perl   extract_sgRNAs_across_genome.pl   gff3_file   genome.fa   output_filename<br>
+Usage:  
+        perl   extract_sgRNAs_across_genome.pl   gff3_file   genome.fa   output_filename<br>
 
 For example:<br>
 
