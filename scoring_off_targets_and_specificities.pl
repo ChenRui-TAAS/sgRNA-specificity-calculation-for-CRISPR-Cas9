@@ -2,13 +2,14 @@
 use strict;
 
 # Author:			Rui Chen <chenrui.taas@gmail.com; chenrui.2011@outlook.com>
-# Program Date:		2017.02.20	specificity scoring system for each sgRNA
+# Program Date:			2017.02.20	specificity scoring system for each sgRNA
 # Modified:			2017.03.02	
 # Modified:			2017.03.11	
 # Modified:			2017.03.13	
 # Modified:			2017.03.20  a.mismatch_number > 10000 
 #								b.mismatch_number = 0
 #								c.23nt_perfect_match and 20nt_perfect_match, output "0" and "error"
+# Version:			1.0
 
 ## Explanation for gRNA seeds and cleavage site:
 ## Finding CCN and NGG from 5' to 3'
