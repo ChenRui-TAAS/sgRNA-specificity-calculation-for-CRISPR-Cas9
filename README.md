@@ -18,30 +18,31 @@ _Glycine max_ genome (Gmax_275_v2.0) and annotation files were downloaded from P
 
 Manual for sgRNA analysis
 -------------------------
-* Step_1, get whole set of sgRNA sequences.  
+## Step_1, get whole set of sgRNA sequences.  
 
-  "extract_sgRNAs_across_genome.pl"  
+"extract_sgRNAs_across_genome.pl"  
 
-  Usage: 
+Usage: 
 ```Perl
 perl   extract_sgRNAs_across_genome.pl   gff3_file   genome.fa   output_filename<br>
 ```
-  For example:  
-  gff3_file	Arabidopsis_thaliana.TAIR10.37.gff3  
-  genome.fa	Arabidopsis_thaliana.TAIR10.dna.toplevel.fa  
-  out_file	sgRNA_whole_genome_TAIR10.fa  
+For example:  
+gff3_file>>>Arabidopsis_thaliana.TAIR10.37.gff3  
+genome.fa>>>Arabidopsis_thaliana.TAIR10.dna.toplevel.fa  
+out_file>>>sgRNA_whole_genome_TAIR10.fa  
 
-* Step_2, exclude repeat sgRNAs.
+## Step_2, exclude repeat sgRNAs.
 
-  "build_orphan_list.pl"
+"build_orphan_list.pl"
 
-  Usage:
+Usage:
 ```Perl
 perl   build_orphan_list.pl    input_sgRNA.fa    output_filename
 ```
-  For example:  
-  input_sgRNA.fa	sgRNA_whole_genome_TAIR10.fa  
-  output_filename	sgRNA_whole_genome_TAIR10_orphan.fa  
+For example:  
+input_sgRNA.fa	sgRNA_whole_genome_TAIR10.fa  
+output_filename	sgRNA_whole_genome_TAIR10_orphan.fa  
+
 
 * Step_3, extend sgRNA sequence to 23nt including PAM site.
 
