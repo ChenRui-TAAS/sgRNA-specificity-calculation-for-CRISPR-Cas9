@@ -3,10 +3,11 @@ use strict;
 
 # Author:			Rui Chen <chenrui.taas@gmail.com; chenrui.2011@outlook.com>
 # Program Date:		2014.07.29	
-# Modified:			2015.03.25 
-# Modified:			2015.03.26	Optimize memory consumption
-# Modified:			2015.04.07	Only for each chromosome
-# Modified:			2017.09.26	For TAIR10 ensemblgenomes_TAIR10_37	
+# Modified:		2015.03.25 
+# Modified:		2015.03.26	Optimize memory consumption
+# Modified:		2015.04.07	Only for each chromosome
+# Modified:		2017.09.26	For TAIR10 ensemblgenomes_TAIR10_37	
+# Version:		1.0
 #############################################################
 
 ## Explanation for cleavage site:
