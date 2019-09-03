@@ -112,9 +112,9 @@ Usage:
 perl	grep_sgRNA_via_locusTable.pl   locus_table   score_table	 output_filename
 ```
 For example:  
-locus_table:		locus_table_ncrna  
-score_table:		sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa  
-output_filename:	locus_table_ncrna_sgRNA_out.xls  
+locus_table: locus_table_ncrna  
+score_table: sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa  
+output_filename: locus_table_ncrna_sgRNA_out.xls  
 
 Content of locus_table_ncrna file:  
 ```Bash
