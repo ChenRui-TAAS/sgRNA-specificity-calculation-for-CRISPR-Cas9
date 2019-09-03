@@ -1,9 +1,10 @@
 #! usr/bin/perl -w
 use strict;
 
-# Author:			Rui Chen <chenrui.taas@gmail.com; chenrui.2011@outlook.com>
+# Author:		Rui Chen <chenrui.taas@gmail.com; chenrui.2011@outlook.com>
 # Program Date:		2014.07.30		
-# Modified:			2015.03.09 
+# Modified:		2015.03.09 
+# Version:		1.0
 ############################################################
 
 my $in = shift;
