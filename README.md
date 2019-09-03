@@ -5,7 +5,7 @@ A simple pipeline for genome-wide calculating sgRNA specificity and off-target n
 
 Rui Chen
 
-chenrui.taas@gmail.com;chenrui.2011@outlook.com
+chenrui.taas@gmail.com; chenrui.2011@outlook.com
 
 
 ####################
