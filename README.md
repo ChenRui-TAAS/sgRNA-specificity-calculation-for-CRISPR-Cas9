@@ -18,7 +18,7 @@ _Glycine max_ genome (Gmax_275_v2.0) and annotation files were downloaded from P
 
 Manual for sgRNA analysis
 -------------------------
-## Step_1, get whole set of sgRNA sequences.  
+### Step_1, get whole set of sgRNA sequences.  
 
 "extract_sgRNAs_across_genome.pl"  
 
@@ -27,11 +27,11 @@ Usage:
 perl   extract_sgRNAs_across_genome.pl   gff3_file   genome.fa   output_filename<br>
 ```
 For example:  
-gff3_file>>>Arabidopsis_thaliana.TAIR10.37.gff3  
-genome.fa>>>Arabidopsis_thaliana.TAIR10.dna.toplevel.fa  
-out_file>>>sgRNA_whole_genome_TAIR10.fa  
+gff3_file: Arabidopsis_thaliana.TAIR10.37.gff3  
+genome.fa: Arabidopsis_thaliana.TAIR10.dna.toplevel.fa  
+out_file: sgRNA_whole_genome_TAIR10.fa  
 
-## Step_2, exclude repeat sgRNAs.
+### Step_2, exclude repeat sgRNAs.
 
 "build_orphan_list.pl"
 
@@ -40,23 +40,23 @@ Usage:
 perl   build_orphan_list.pl    input_sgRNA.fa    output_filename
 ```
 For example:  
-input_sgRNA.fa	sgRNA_whole_genome_TAIR10.fa  
-output_filename	sgRNA_whole_genome_TAIR10_orphan.fa  
+input_sgRNA.fa: sgRNA_whole_genome_TAIR10.fa  
+output_filename: sgRNA_whole_genome_TAIR10_orphan.fa  
 
 
-* Step_3, extend sgRNA sequence to 23nt including PAM site.
+### Step_3, extend sgRNA sequence to 23nt including PAM site.
 
-  "reform_sgRNA.pl"
+"reform_sgRNA.pl"
 
-  Usage: 
+Usage: 
 ```Perl
 perl   reform_sgRNA.pl   orphan.fa   output_filename
 ```
-  For example:  
-  orphan.fa	sgRNA_whole_genome_TAIR10_orphan.fa  
-	output_filename sgRNA_whole_genome_TAIR10_orphan_23nt.fa  
+For example:  
+orphan.fa: sgRNA_whole_genome_TAIR10_orphan.fa  
+output_filename: sgRNA_whole_genome_TAIR10_orphan_23nt.fa  
 
-* Step_4, genomic mapping using BatMis.
+### Step_4, genomic mapping using BatMis.
 ```Bash
 build_index	Arabidopsis_thaliana.TAIR10.dna.toplevel.fa
 ```
@@ -78,45 +78,45 @@ batdecode \
 -o batman_out_TAIR10_orphan_23nt.txt.gz
 ```
 
-* Step_5, scoring sgRNAs
+### Step_5, scoring sgRNAs
 
-  "scoring_off_targets_and_specificities.pl"
+"scoring_off_targets_and_specificities.pl"
 
-  Usage:
+Usage:
 ```Perl
 perl   scoring_off_targets_and_specificities.pl   batmanOut.txt.gz   scoringOut.txt
 ```
-  For example:  
-  batmanOut.txt.gz        batman_out_TAIR10_orphan_23nt.txt.gz  
-  scoringOut.txt          scoringOut_TAIR10_orphan_23nt.txt  
+For example:  
+batmanOut.txt.gz: batman_out_TAIR10_orphan_23nt.txt.gz  
+scoringOut.txt: scoringOut_TAIR10_orphan_23nt.txt  
 
-* Step_6, label back to sgRNAs.fa
+### Step_6, label back to sgRNAs.fa
 
-  Usage:
+Usage:
 ```Bash
 perl   label_back_sgRNA.pl   sgRNA_orphan.fa   score_table   output_filename
 ```
-  For example:  
-  sgRNA_orphan.fa	sgRNA_whole_genome_TAIR10_orphan.fa  
-  score_table	scoringOut_TAIR10_orphan_23nt.txt  
-  output_filename	sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa  
+For example:  
+sgRNA_orphan.fa: sgRNA_whole_genome_TAIR10_orphan.fa  
+score_table: scoringOut_TAIR10_orphan_23nt.txt  
+output_filename: sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa  
 
-  Herein, "sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa" is the generated DATABASE for sgRNAs.
+Herein, "sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa" is the generated DATABASE for sgRNAs.
 
-* Step_7, extract and sort sgRNAs according to appointed genes
+### Step_7, extract and sort sgRNAs according to appointed genes
 
-  "grep_sgRNA_via_locusTable.pl"
+"grep_sgRNA_via_locusTable.pl"
 
-  Usage:
+Usage:
 ```Bash
 perl	grep_sgRNA_via_locusTable.pl   locus_table   score_table	 output_filename
 ```
-  For example:  
-  locus_table	locus_table_ncrna  
-  score_table	sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa  
-  output_filename	locus_table_ncrna_sgRNA_out.xls  
+For example:  
+locus_table:		locus_table_ncrna  
+score_table:		sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa  
+output_filename:	locus_table_ncrna_sgRNA_out.xls  
 
-  Content of locus_table_ncrna file:  
+Content of locus_table_ncrna file:  
 ```Bash
 AT1G05853.1	Chr1	8525104	8525204
 AT2G04455.1	Chr2	852860	853054
@@ -136,3 +136,4 @@ AT3G57645.1	Chr3	21346342	21347204
 At last, you can obtain a sgRNA table according to each gene.   
 Ten sgRNAs that have the most high specificities will be listed with detailed information.  
 Then, you can pick up desired sgRNA candidates for knock-out CRISPR-Cas9 experiment.  
+
