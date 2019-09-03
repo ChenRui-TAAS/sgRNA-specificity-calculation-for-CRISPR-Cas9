@@ -24,7 +24,7 @@ Manual for sgRNA analysis
 
 Usage: 
 ```Perl
-perl   extract_sgRNAs_across_genome.pl   gff3_file   genome.fa   output_filename<br>
+perl   extract_sgRNAs_across_genome.pl   gff3_file   genome.fa   output_filename
 ```
 For example:  
 gff3_file: Arabidopsis_thaliana.TAIR10.37.gff3  
