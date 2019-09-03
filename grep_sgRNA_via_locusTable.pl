@@ -3,7 +3,7 @@ use strict;
 
 # Author:		Rui Chen <chenrui.taas@gmail.com; chenrui.2011@outlook.com>
 # Program Date:		2017.04.13	
-# # Version:		1.0		
+# Version:		1.0		
 ############################################################
 
 my $locus_table = shift;
