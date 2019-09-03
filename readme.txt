@@ -7,17 +7,14 @@ File directory tree:
 
 --|sgRNA_Arabidopsis/
    --|Arabidopsis_TAIR10_sgRNA_Uniq.fa.gz
-   --|Arabidopsis_thaliana.TAIR10.37.gff3.gz
-   --|Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
+   --|Arabidopsis_genome_and_annotation_readme.txt
 --|sgRNA_Rice/
    --|Rice_IRGSP1_sgRNA_Uniq.fa.gz
-   --|GCF_001433935.1_IRGSP-1.0_genomic.gff.gz
-   --|GCF_001433935.1_IRGSP-1.0_genomic.fna.gz
+   --|Rice_genome_and_annotation_readme.txt
 --|sgRNA_Soybean/
    --|Soybean_Gmax275v2_sgRNA_Uniq.fa.gz
-   --|Gmax_275_Wm82.a2.v1.gene_exons.gff3.gz
-   --|Gmax_275_v2.0.softmasked.fa.gz
---|Perl_scripts
+   --|Soybean_genome_and_annotation_readme.txt
+--|Perl_scripts/
    --|Manual_for_sgRNA_analysis
    --|extract_sgRNAs_across_genome.pl
    --|build_orphan_list.pl
@@ -27,6 +24,7 @@ File directory tree:
    --|grep_sgRNA_via_locusTable.pl
 --|readme.txt
 --|md5.list
+
  
 
 ####################
