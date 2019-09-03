@@ -1,30 +1,32 @@
-# sgRNA-specificity-calculation-for-CRISPR-Cas9
+sgRNA-specificity-calculation-for-CRISPR-Cas9
+=============================================
+
 A simple pipeline for genome-wide calculating sgRNA specificity and off-target number for the CRISPR-Cas9 system
 
-2019.07.18
+2019.09.03
 
 Rui Chen
 
 chenrui.taas@gmail.com; chenrui.2011@outlook.com
 
 
-####################
+Brief introduction
+------------------
+Clustered regularly interspaced short palindromic repeats (CRISPR), a class of immune-associated sequences in bacteria, have been developed as a powerful tool for editing eukaryotic genomes in diverse cells and organisms in recent years. The CRISPR-Cas9 system can recognize upstream 20 nt sequence (guide sequence) adjacent to the PAM site, and trigger double strand DNA cleavage and DNA repair mechanisms, which eventually result in knock-out, knock-in or site-specific mutagenesis. However, off-target effect caused by guide sequence misrecognition is the major drawback and restricts its widespread application. In this study, global analysis of specificities of all guide sequences in _Arabidopsis thaliana_, _Oryza sativa_ (rice) and _Glycine max_ (soybean) genomes were performed and three genome-wide databases for these plants were established including intergenic regions. For each target site of CRISPR-Cas9, specificity score and off-target number were calculated and evaluated. The mean values of off-target number for A. thaliana, rice and soybean were determined as 27.5, 57.3 and 174.7, respectively. Comparative analysis among these plants suggested that the frequency of off-target effect was positively correlated to genome size. Our results contributed to the better understanding of CRISPR-Cas9 system in plants and helped to minimize the off-target effect during its applications in the future.
 
-Clustered regularly interspaced short palindromic repeats (CRISPR), a class of immune-associated sequences in bacteria, have been developed as a powerful tool for editing eukaryotic genomes in diverse cells and organisms in recent years. The CRISPR-Cas9 system can recognize upstream 20 nt sequence (guide sequence) adjacent to the PAM site, and trigger double strand DNA cleavage and DNA repair mechanisms, which eventually result in knock-out, knock-in or site-specific mutagenesis. However, off-target effect caused by guide sequence misrecognition is the major drawback and restricts its widespread application. In this study, global analysis of specificities of all guide sequences in Arabidopsis thaliana, Oryza sativa (rice) and Glycine max (soybean) genomes were performed and three genome-wide databases for these plants were established including intergenic regions. For each target site of CRISPR-Cas9, specificity score and off-target number were calculated and evaluated. The mean values of off-target number for A. thaliana, rice and soybean were determined as 27.5, 57.3 and 174.7, respectively. Comparative analysis among these plants suggested that the frequency of off-target effect was positively correlated to genome size. Our results contributed to the better understanding of CRISPR-Cas9 system in plants and helped to minimize the off-target effect during its applications in the future.
-
-####################
 
 Version of plant genomes:
+-------------------------
+_Arabidopsis thaliana_ genome (TAIR10) was downloaded from Ensembl (http://www.ensembl.org).
 
-A.thaliana genome (TAIR10) was downloaded from Ensembl (http://www.ensembl.org). 
-O. sativa genome (IRGSP-1.0) was downloaded from NCBI (GCF_001433935.1). 
-G. max genome (Gmax_275_v2.0) and annotation files were downloaded from Phytozome (https://phytozome.jgi.doe.gov, Gmax V10). 
+_Oryza sativa_ genome (IRGSP-1.0) was downloaded from NCBI (GCF_001433935.1).
 
-####################
+_Glycine max_ genome (Gmax_275_v2.0) and annotation files were downloaded from Phytozome (https://phytozome.jgi.doe.gov, Gmax V10).
+
 
 Manual for sgRNA analysis
-
-##Step_1, get whole set of sgRNA sequences.
+-------------------------
+###Step_1, get whole set of sgRNA sequences.
 
 "extract_sgRNAs_across_genome.pl"
 
@@ -32,11 +34,13 @@ Usage:
 perl   extract_sgRNAs_across_genome.pl   gff3_file   genome.fa   output_filename
 
 For example:
+
+
 gff3_file	Arabidopsis_thaliana.TAIR10.37.gff3
 genome.fa	Arabidopsis_thaliana.TAIR10.dna.toplevel.fa
 out_file	sgRNA_whole_genome_TAIR10.fa
 
-##Step_2, exclude repeat sgRNAs.
+###Step_2, exclude repeat sgRNAs.
 
 "build_orphan_list.pl"
 
@@ -48,7 +52,7 @@ input_sgRNA.fa	sgRNA_whole_genome_TAIR10.fa
 output_filename	sgRNA_whole_genome_TAIR10_orphan.fa
 
 
-##Step_3, extend sgRNA sequence to 23nt including PAM site.
+###Step_3, extend sgRNA sequence to 23nt including PAM site.
 
 "reform_sgRNA.pl"
 
@@ -59,7 +63,7 @@ For example:
 orphan.fa	sgRNA_whole_genome_TAIR10_orphan.fa
 output_filename	sgRNA_whole_genome_TAIR10_orphan_23nt.fa
 
-##Step_4, genomic mapping using BatMis.
+###Step_4, genomic mapping using BatMis.
 
 build_index	Arabidopsis_thaliana.TAIR10.dna.toplevel.fa
 
@@ -77,7 +81,7 @@ batdecode \
 -o batman_out_TAIR10_orphan_23nt.txt.gz
 
 
-##Step_5, scoring sgRNAs
+###Step_5, scoring sgRNAs
 
 "scoring_off_targets_and_specificities.pl"
 
@@ -88,7 +92,7 @@ For example:
 batmanOut.txt.gz        batman_out_TAIR10_orphan_23nt.txt.gz
 scoringOut.txt          scoringOut_TAIR10_orphan_23nt.txt
 
-##Step_6, label back to sgRNAs.fa
+###Step_6, label back to sgRNAs.fa
 
 Usage:	
 perl   label_back_sgRNA.pl   sgRNA_orphan.fa   score_table   output_filename
@@ -100,7 +104,7 @@ output_filename	sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa
 
 Herein, "sgRNA_whole_genome_TAIR10_orphan_scoreLabeled.fa" is the generated DATABASE for sgRNAs.
 
-##Step_7, extract and sort sgRNAs according to appointed genes
+###Step_7, extract and sort sgRNAs according to appointed genes
 
 "grep_sgRNA_via_locusTable.pl"
 
