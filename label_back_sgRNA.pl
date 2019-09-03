@@ -1,9 +1,9 @@
 #! usr/bin/perl -w
 use strict;
 
-# Author:			Rui Chen <chenrui.taas@gmail.com; chenrui.2011@outlook.com>
+# Author:		Rui Chen <chenrui.taas@gmail.com; chenrui.2011@outlook.com>
 # Program Date:		2017.04.13	
-# Modified:		
+# Version:		1.0		
 ############################################################
 
 my $guide_fa = shift;
